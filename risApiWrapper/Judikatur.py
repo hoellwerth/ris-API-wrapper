@@ -8,6 +8,7 @@ from risApiWrapper.Helper import (
     _get_content_urls
 )
 
+baseURL = "https://data.bka.gv.at/ris/api/v2.6/judikatur"
 
 @dataclass
 class _Base_Class:
@@ -159,7 +160,7 @@ class Justiz(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -261,7 +262,7 @@ class Vfgh(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.5/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -370,7 +371,7 @@ class Vwgh(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -463,7 +464,7 @@ class Bvwg(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -578,7 +579,7 @@ class Lvwg(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -709,7 +710,7 @@ class Gbk(_Base_Class):
 
         # There are no Rechtssaetze in Gbk decisions
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur", arguments
+            baseURL, arguments
         )
 
         self._results = _convert_results(response)
@@ -817,7 +818,7 @@ class Dsk(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -901,7 +902,7 @@ class Dok(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
@@ -999,7 +1000,7 @@ class Pvak(_Base_Class):
         }
 
         response = _request(
-            "https://data.bka.gv.at/ris/api/v2.6/judikatur",
+            baseURL,
             _rechtssatz_or_enscheidungstext(
                 arguments, show_entscheidungstexte, show_rechtssaetze
             ),
